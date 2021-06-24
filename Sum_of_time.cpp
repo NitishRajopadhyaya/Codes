@@ -31,20 +31,30 @@ using namespace std;
               total_hours= t1.hours + t2.hours; 
 
               total_minutes= t1.minutes + t2.minutes;
-
+                   
+                   
                     if(total_minutes>=60)
                     {
-                        total_hours++;
-                        total_minutes=total_minutes-60;
+                        while (total_minutes>=60)
+                        {
+                            total_hours++;
+                            total_minutes=total_minutes-60;
+                        }
+                        
+                        
+                        
                     }
 
               total_seconds= t1.seconds + t2.seconds;
                
                  if(total_seconds>=60)
                   {
-                      total_minutes++;
-                       total_seconds=total_seconds-60;
-
+                            while (total_seconds>=60)
+                            {
+                                total_minutes++;
+                            total_seconds=total_seconds-60;
+                            }
+                            
                             if(total_minutes>=60)
                                 {
                                     total_hours++;
